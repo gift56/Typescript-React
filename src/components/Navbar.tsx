@@ -7,15 +7,24 @@ const Navbar = () => {
   const Links = [
     { link: "", name: "home" },
     { link: "about", name: "about" },
-    { link: "service", name: "service" },
+    { link: "store", name: "store" },
   ];
+
+  const selectProduct = (index: number) => {
+    setActive(index);
+  };
+
   return (
     <header className="header">
       <div className="container">
         <nav className="nav">
           <ul className="navLinks">
-            {Links.map(({ link, name }) => (
-              <li key={name}>
+            {Links.map(({ link, name }, index) => (
+              <li
+                key={index}
+                className={`li ${active === index ? "active" : ""}`}
+                onClick={() => selectProduct(index)}
+              >
                 <Link to={`/${link}`}>{name}</Link>
               </li>
             ))}
