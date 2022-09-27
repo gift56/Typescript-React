@@ -5,4 +5,14 @@
   outline: none;
   border: none;
   font-family: $font;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  background-color: #f1e7e7;
+}
+a {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
 }
