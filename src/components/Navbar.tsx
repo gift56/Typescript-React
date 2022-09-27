@@ -30,8 +30,9 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <button>
-            <AiOutlineShoppingCart size={40} />
+          <button className="btn">
+            <AiOutlineShoppingCart size={30} color="#fff" />
+            <div></div>
           </button>
         </nav>
       </div>
