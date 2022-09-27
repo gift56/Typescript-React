@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -29,7 +30,9 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          Hi
+          <button>
+            <AiOutlineShoppingCart size={40} />
+          </button>
         </nav>
       </div>
     </header>
