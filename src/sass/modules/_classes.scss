@@ -1,0 +1,21 @@
+.d-f {
+  display: flex;
+}
+.d-b {
+  display: flex;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
