@@ -15,6 +15,21 @@ header {
     }
     button {
       position: relative;
+      p {
+        position: absolute;
+        top: 0;
+        right: 2px;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50px;
+        background-color: #d84141;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 600;
+      }
     }
   }
 }

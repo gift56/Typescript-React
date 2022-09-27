@@ -32,7 +32,7 @@ const Navbar = () => {
           </ul>
           <button className="btn">
             <AiOutlineShoppingCart size={30} color="#fff" />
-            <div></div>
+            <p className="numbers">0</p>
           </button>
         </nav>
       </div>
