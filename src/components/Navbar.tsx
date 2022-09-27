@@ -29,6 +29,7 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+          Hi
         </nav>
       </div>
     </header>
