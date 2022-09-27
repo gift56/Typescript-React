@@ -5,7 +5,7 @@ import Store from "./pages/Store";
 
 function App() {
   return (
-    <div className="container">
+    <div className="container mb-4">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/store" element={<Store />} />
