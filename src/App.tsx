@@ -1,11 +1,7 @@
-import React from 'react';
+import { Routes, Route } from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      Hello wolrd
-    </div>
-  );
+  return <div className="container">hello world</div>;
 }
 
 export default App;
