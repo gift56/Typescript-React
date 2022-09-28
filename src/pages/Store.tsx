@@ -8,7 +8,7 @@ const Store = () => {
       <div className="grid">
         {storeItems.map((item) => (
           <div className="col" key={item.id}>
-            <StoreItem {...item} />
+            <StoreItem item={item} />
           </div>
         ))}
       </div>

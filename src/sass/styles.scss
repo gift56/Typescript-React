@@ -49,4 +49,16 @@ header {
       width: 100%;
     }
   }
+  .body {
+    display: flex;
+    flex-direction: column;
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      background-color: white;
+    }
+  }
 }
