@@ -1,8 +1,17 @@
+import { useShoppingCart } from "../context/ShoppingCartContext";
 import { formatCurrency } from "../utilities/formatCurrency";
 
 const StoreItem = ({ item }: any) => {
   const { id, name, price, imgUrl } = item;
-  let quantity = 0;
+  const {
+    getItemQuantity,
+    increaseCartQuantity,
+    decreaseCartQuantity,
+    removeFromCart,
+  } = useShoppingCart();
+
+  let quantity = getItemQuantity(id);
+  
   return (
     <div className="card">
       <div className="image">
@@ -15,17 +24,34 @@ const StoreItem = ({ item }: any) => {
         </div>
         <div className="w-100">
           {quantity === 0 ? (
-            <button className="btn w-100">+ Add To Cart</button>
+            <button
+              className="btn w-100"
+              onClick={() => increaseCartQuantity(id)}
+            >
+              + Add To Cart
+            </button>
           ) : (
             <div className="addingCart">
               <div className="buttons center">
-                <button className="btn">-</button>
+                <button
+                  className="btn"
+                  onClick={() => decreaseCartQuantity(id)}
+                >
+                  -
+                </button>
                 <h3>
                   <span>{quantity}</span> in Cart
                 </h3>
-                <button className="btn">+</button>
+                <button
+                  className="btn"
+                  onClick={() => increaseCartQuantity(id)}
+                >
+                  +
+                </button>
               </div>
-              <button className="btn remove">Remove</button>
+              <button className="btn remove" onClick={() => removeFromCart(id)}>
+                Remove
+              </button>
             </div>
           )}
         </div>
