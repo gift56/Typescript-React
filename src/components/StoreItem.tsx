@@ -2,7 +2,7 @@ import { formatCurrency } from "../utilities/formatCurrency";
 
 const StoreItem = ({ item }: any) => {
   const { id, name, price, imgUrl } = item;
-  let quantity = 1;
+  let quantity = 0;
   return (
     <div className="card">
       <div className="image">
@@ -15,7 +15,7 @@ const StoreItem = ({ item }: any) => {
         </div>
         <div className="w-100">
           {quantity === 0 ? (
-            <button className="btn">+ Add To Cart</button>
+            <button className="btn w-100">+ Add To Cart</button>
           ) : (
             <div className="addingCart">
               <div className="buttons center">
@@ -25,7 +25,7 @@ const StoreItem = ({ item }: any) => {
                 </h3>
                 <button className="btn">+</button>
               </div>
-              BYE
+              <button className="btn remove">Remove</button>
             </div>
           )}
         </div>
