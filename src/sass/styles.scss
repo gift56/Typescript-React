@@ -43,6 +43,7 @@ header {
 }
 .card {
   width: 100%;
+  height: 100%;
   .image {
     width: 100%;
     img {
@@ -52,6 +53,11 @@ header {
   .body {
     display: flex;
     flex-direction: column;
+    .addingCart{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     .title {
       display: flex;
       justify-content: space-between;
@@ -63,7 +69,7 @@ header {
         font-size: 18px;
         font-weight: 600;
       }
-      span{
+      span {
         font-size: 16px;
         font-weight: 500;
         color: #baadad;
