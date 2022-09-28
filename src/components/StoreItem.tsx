@@ -1,10 +1,3 @@
-// type StoreItemProps = {
-//   id: number;
-//   name: string;
-//   price: number;
-//   imgUrl: string;
-// };
-
 import { formatCurrency } from "../utilities/formatCurrency";
 
 const StoreItem = ({ item }: any) => {
