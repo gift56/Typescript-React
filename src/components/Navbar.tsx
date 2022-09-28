@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { useShoppingCart } from "../context/ShoppingCartContext";
 
 const Navbar = () => {
   const [active, setActive] = useState(0);
+  const { openCart, closeCart, cartQuantity } = useShoppingCart();
 
   const Links = [
     { link: "", name: "home" },
@@ -30,10 +32,12 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <button className="btn">
-            <AiOutlineShoppingCart size={30} color="#fff" />
-            <p className="numbers">0</p>
-          </button>
+          {cartQuantity > 0 && (
+            <button className="btn" onClick={() => openCart()}>
+              <AiOutlineShoppingCart size={30} color="#fff" />
+              <p className="numbers">{cartQuantity}</p>
+            </button>
+          )}
         </nav>
       </div>
     </header>
