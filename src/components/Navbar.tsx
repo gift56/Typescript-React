@@ -5,7 +5,7 @@ import { useShoppingCart } from "../context/ShoppingCartContext";
 
 const Navbar = () => {
   const [active, setActive] = useState(0);
-  const { openCart, closeCart, cartQuantity } = useShoppingCart();
+  const { openCart, cartQuantity } = useShoppingCart();
 
   const Links = [
     { link: "", name: "home" },
