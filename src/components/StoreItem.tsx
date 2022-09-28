@@ -15,7 +15,7 @@ const StoreItem = ({ item }: any) => {
       <div className="body">
         <div className="title">
           <h4>{name}</h4>
-          <span>${price}</span>
+          <span>{price}</span>
         </div>
       </div>
     </div>
