@@ -18,7 +18,13 @@ const StoreItem = ({ item }: any) => {
             <button className="btn">+ Add To Cart</button>
           ) : (
             <div className="addingCart">
-              <div className="buttons center">Hi</div>
+              <div className="buttons center">
+                <button className="btn">-</button>
+                <h3>
+                  <span>{quantity}</span> in Cart
+                </h3>
+                <button className="btn">+</button>
+              </div>
               BYE
             </div>
           )}
