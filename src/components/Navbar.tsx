@@ -21,7 +21,7 @@ const Navbar = () => {
     <header className="header">
       <div className="container">
         <nav className="nav">
-          <ul className="navLinks">
+          <ul className="navLinked">
             {Links.map(({ link, name }, index) => (
               <li
                 key={index}

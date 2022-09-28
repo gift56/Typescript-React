@@ -1,23 +1,23 @@
 .d-f {
-  display: flex;
+  display: flex !important;
 }
 .d-b {
-  display: flex;
+  display: flex !important;
 }
 .container {
   width: 90% !important;
   margin: 0 auto !important;
 }
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
 }
-.navLink {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
+.navLinked {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 2rem !important;
 }
 .mb-1 {
   margin-bottom: 8rem;
@@ -42,16 +42,16 @@
   color: #2c2cc0;
 }
 .btn {
-  background-color: #2929e4;
-  padding: 12px 20px;
-  cursor: pointer;
-  transition: 3ms;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  color: white;
+  background-color: #2929e4 !important;
+  padding: 12px 20px !important;
+  cursor: pointer!important;
+  transition: 3ms!important;
+  border-radius: 8px!important;
+  display: flex!important;
+  justify-content: center!important;
+  align-items: center!important;
+  font-size: 18px!important;
+  color: white!important;
 }
 .center {
   display: flex;

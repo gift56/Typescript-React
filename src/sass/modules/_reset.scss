@@ -4,15 +4,15 @@
   box-sizing: border-box;
   outline: none;
   border: none;
-  font-family: $font;
-  list-style: none;
-  text-decoration: none;
+  font-family: $font !important;
+  list-style: none !important;
+  text-decoration: none !important;
 }
 body {
   background-color: #f1e7e7;
 }
 a {
-  color: inherit;
-  font-size: inherit;
-  font-weight: inherit;
+  color: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
 }
