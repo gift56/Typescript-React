@@ -41,3 +41,12 @@ header {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.card {
+  width: 100%;
+  .image {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+}
