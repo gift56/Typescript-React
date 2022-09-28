@@ -33,3 +33,11 @@ header {
     }
   }
 }
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  @media screen and (min-width: 560px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
