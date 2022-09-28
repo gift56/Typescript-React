@@ -1,26 +1,26 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "name": "Girl With Laptop",
-    "price": "10.99",
+    "price": 10.99,
     "imgUrl": "/assets/laptopWoman.png"
   },
   {
-    "id": "2",
+    "id": 2,
     "name": "Man that Smiles",
-    "price": "20.99",
+    "price": 20.99,
     "imgUrl": "/assets/guyWithPC.png"
   },
   {
-    "id": "3",
+    "id": 3,
     "name": "Man on At",
-    "price": "20.99",
+    "price": 20.99,
     "imgUrl": "/assets/QHSESMan.svg"
   },
   {
-    "id": "4",
+    "id": 4,
     "name": "Lady On Pink",
-    "price": "0.99",
+    "price": 0.99,
     "imgUrl": "/assets/ladyInPink.png"
   }
 ]

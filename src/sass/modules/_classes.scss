@@ -42,16 +42,18 @@
   color: #2c2cc0;
 }
 .btn {
-  background-color: #2929e4 !important;
   padding: 12px 20px !important;
-  cursor: pointer!important;
-  transition: 3ms!important;
-  border-radius: 8px!important;
-  display: flex!important;
-  justify-content: center!important;
-  align-items: center!important;
-  font-size: 18px!important;
-  color: white!important;
+  cursor: pointer !important;
+  transition: 3ms !important;
+  border-radius: 8px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-size: 18px !important;
+  color: white !important;
+  &:hover {
+    opacity: 0.7 !important;
+  }
 }
 .center {
   display: flex;
@@ -62,6 +64,9 @@
 .w-100 {
   width: 100%;
 }
-.a-center{
+.a-center {
   align-items: center;
+}
+.myBtn {
+  background-color: #2929e4 !important;
 }

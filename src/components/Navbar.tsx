@@ -33,7 +33,7 @@ const Navbar = () => {
             ))}
           </ul>
           {cartQuantity > 0 && (
-            <button className="btn" onClick={() => openCart()}>
+            <button className="btn myBtn" onClick={() => openCart()}>
               <AiOutlineShoppingCart size={30} color="#fff" />
               <p className="numbers">{cartQuantity}</p>
             </button>

@@ -11,7 +11,7 @@ const StoreItem = ({ item }: any) => {
   } = useShoppingCart();
 
   let quantity = getItemQuantity(id);
-  
+
   return (
     <div className="card">
       <div className="image">
@@ -25,7 +25,7 @@ const StoreItem = ({ item }: any) => {
         <div className="w-100">
           {quantity === 0 ? (
             <button
-              className="btn w-100"
+              className="btn w-100 myBtn"
               onClick={() => increaseCartQuantity(id)}
             >
               + Add To Cart
@@ -34,7 +34,7 @@ const StoreItem = ({ item }: any) => {
             <div className="addingCart">
               <div className="buttons center">
                 <button
-                  className="btn"
+                  className="btn myBtn"
                   onClick={() => decreaseCartQuantity(id)}
                 >
                   -
@@ -43,7 +43,7 @@ const StoreItem = ({ item }: any) => {
                   <span>{quantity}</span> in Cart
                 </h3>
                 <button
-                  className="btn"
+                  className="btn myBtn"
                   onClick={() => increaseCartQuantity(id)}
                 >
                   +
