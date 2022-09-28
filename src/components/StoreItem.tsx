@@ -5,6 +5,8 @@
 //   imgUrl: string;
 // };
 
+import { formatCurrency } from "../utilities/formatCurrency";
+
 const StoreItem = ({ item }: any) => {
   const { id, name, price, imgUrl } = item;
   return (
@@ -15,7 +17,7 @@ const StoreItem = ({ item }: any) => {
       <div className="body">
         <div className="title">
           <h4>{name}</h4>
-          <span>{price}</span>
+          <span>{formatCurrency(price)}</span>
         </div>
       </div>
     </div>
