@@ -32,10 +32,27 @@
   margin-bottom: 1.5rem;
 }
 .header {
-  background-color: white;
   border-bottom: 1px solid rgb(46, 45, 45);
   margin-bottom: 1rem;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  button {
+    position: relative;
+    p {
+      position: absolute;
+      top: 0;
+      right: 2px;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50px;
+      background-color: #d84141;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
 }
 
 .active {
