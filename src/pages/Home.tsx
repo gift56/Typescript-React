@@ -1,29 +1,19 @@
-import { useEffect, useState } from "react";
-import { Products } from "../utilities/interface";
-import axios from "axios";
 import { formatCurrency } from "../utilities/formatCurrency";
+import { Products } from "../utilities/interface";
 
-const Home = () => {
-  const [product, setProduct] = useState<Products[]>([]);
+type HomeProps = {
+  product: Products[];
+};
 
-  const fetchAllProducts = async () => {
-    axios.get("https://fakestoreapi.com/products").then((res) => {
-      setProduct(res.data);
-    });
-  };
+const truckcateString = (str: string, num: number) => {
+  if (str?.length > num) {
+    return str.slice(0, num) + "...";
+  } else {
+    return str;
+  }
+};
 
-  const truckcateString = (str: string, num: number) => {
-    if (str?.length > num) {
-      return str.slice(0, num) + "...";
-    } else {
-      return str;
-    }
-  };
-
-  useEffect(() => {
-    fetchAllProducts();
-  }, []);
-
+const Home = ({ product }: HomeProps) => {
   return (
     <div>
       <div className="grid">
