@@ -13,7 +13,7 @@ type CartItemProps = {
 
 const CartItem = ({ id, quantity }: CartItemProps) => {
   const [product, setProduct] = useState<Products[]>([]);
-  
+
   const fetchAllProducts = async () => {
     axios.get("https://fakestoreapi.com/products").then((res) => {
       setProduct(res.data);
@@ -23,6 +23,14 @@ const CartItem = ({ id, quantity }: CartItemProps) => {
   useEffect(() => {
     fetchAllProducts();
   }, []);
+
+  const truckcateString = (str: string, num: number) => {
+    if (str?.length > num) {
+      return str.slice(0, num) + "...";
+    } else {
+      return str;
+    }
+  };
 
   const { removeFromCart } = useShoppingCart();
   const item = product.find((i) => i.id === id);
@@ -37,14 +45,14 @@ const CartItem = ({ id, quantity }: CartItemProps) => {
       />
       <div className="me-auto">
         <div>
-          {item?.title}{" "}
+          {truckcateString(item?.title, 28)}{" "}
           {quantity > 1 && (
             <span className="text-muted" style={{ fontSize: "0.65rem" }}>
               x{quantity}
             </span>
           )}
         </div>
-        <p className="text-muted" style={{ fontSize: "0.75rem" }}>
+        <p className="text-muted" style={{ fontSize: "0.85rem" }}>
           {formatCurrency(item?.price)}
         </p>
       </div>
