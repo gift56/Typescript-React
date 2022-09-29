@@ -8,10 +8,10 @@ import styles from "../sass/Header.module.scss";
 
 const Navbar = () => {
   const { openCart, cartQuantity } = useShoppingCart();
-  const { theme, setTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
   return (
-    <NavbarBs sticky="top" className="bg-white shadow-sm mb-3 header">
+    <NavbarBs sticky="top" className={`shadow-sm mb-3 header ${styles[theme]}`}>
       <div className="container">
         <Nav className="me-auto myLinks">
           <Nav.Link to="/" as={NavLink}>
