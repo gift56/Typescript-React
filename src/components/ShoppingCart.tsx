@@ -2,7 +2,10 @@ import { Offcanvas, Stack } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { formatCurrency } from "../utilities/formatCurrency";
 import CartItem from "./CartItem";
-import storeItems from "../data/items.json";
+// import storeItems from "../data/items.json";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { Products } from "../utilities/interface";
 
 type ShoppingCartProps = {
   isOpen: boolean;
@@ -10,6 +13,17 @@ type ShoppingCartProps = {
 
 const ShoppingCart = ({ isOpen }: ShoppingCartProps) => {
   const { closeCart, cartItems } = useShoppingCart();
+  const [product, setProduct] = useState<Products[]>([]);
+  
+  const fetchAllProducts = async () => {
+    axios.get("https://fakestoreapi.com/products").then((res) => {
+      setProduct(res.data);
+    });
+  };
+
+  useEffect(() => {
+    fetchAllProducts();
+  }, []);
 
   return (
     <Offcanvas show={isOpen} onHide={closeCart} placement="end">
@@ -25,7 +39,7 @@ const ShoppingCart = ({ isOpen }: ShoppingCartProps) => {
             Total{" "}
             {formatCurrency(
               cartItems.reduce((total, cartItem) => {
-                const item = storeItems.find((i) => i.id === cartItem.id);
+                const item = product.find((i) => i.id === cartItem.id);
                 return total + (item?.price || 0) * cartItem.quantity;
               }, 0)
             )}
