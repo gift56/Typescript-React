@@ -32,9 +32,9 @@
   margin-bottom: 1.5rem;
 }
 .header {
-  border-bottom: 1px solid rgb(46, 45, 45);
+  border-bottom: 1px solid $gray;
   margin-bottom: 1rem;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  box-shadow: $shadow;
   button {
     position: relative;
     p {
@@ -44,8 +44,8 @@
       width: 1.5rem;
       height: 1.5rem;
       border-radius: 50px;
-      background-color: #d84141;
-      color: white;
+      background-color: $redBg;
+      color: $white;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -55,9 +55,6 @@
   }
 }
 
-.active {
-  color: #2c2cc0;
-}
 .btn {
   padding: 12px 20px !important;
   cursor: pointer !important;
@@ -67,7 +64,7 @@
   justify-content: center !important;
   align-items: center !important;
   font-size: 18px !important;
-  color: white !important;
+  color: $white !important;
   &:hover {
     opacity: 0.7 !important;
   }
@@ -85,5 +82,5 @@
   align-items: center;
 }
 .myBtn {
-  background-color: #2929e4 !important;
+  background-color: $blueBg !important;
 }
