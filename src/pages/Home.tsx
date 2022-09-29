@@ -3,10 +3,17 @@ import { Products } from "../utilities/interface";
 import axios from "axios";
 
 const Home = () => {
-  const [product, setProduct] = useState<Products[]>([]);
+  const [product, setProduct] = useState<Products>({
+    category: "",
+    description: "",
+    id: "",
+    image: "",
+    price: "",
+    title: "",
+  });
 
   const fetchAllProducts = async () => {
-    axios.get<Products[]>("https://fakestoreapi.com/products").then((res) => {
+    axios.get("https://fakestoreapi.com/products").then((res) => {
       setProduct(res.data);
     });
   };
@@ -14,21 +21,12 @@ const Home = () => {
   useEffect(() => {
     fetchAllProducts();
   }, []);
-  const { category, description, id, image, price, title }: any = product;
 
   console.log(product);
 
   return (
     <div>
-      <div className="grid">
-        <div className="card">
-          <div className="image">{/* <img src={title} alt={title} /> */}</div>
-          <div className="body">
-            <div className="title"></div>
-          </div>
-        </div>
-      </div>
-      <h4>{title}</h4>
+      <p>{product?.title}</p>
     </div>
   );
 };
