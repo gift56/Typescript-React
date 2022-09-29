@@ -2,7 +2,6 @@ import { Offcanvas, Stack } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { formatCurrency } from "../utilities/formatCurrency";
 import CartItem from "./CartItem";
-// import storeItems from "../data/items.json";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Products } from "../utilities/interface";
