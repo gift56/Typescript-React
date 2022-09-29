@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <NavbarBs sticky="top" className="bg-white shadow-sm mb-3 header">
       <div className="container">
-        <Nav className="me-auto">
+        <Nav className="me-auto myLinks">
           <Nav.Link to="/" as={NavLink}>
             Home
           </Nav.Link>

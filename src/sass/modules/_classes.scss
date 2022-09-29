@@ -84,3 +84,12 @@
 .myBtn {
   background-color: $blueBg !important;
 }
+.myLinks {
+  a {
+    font-size: 20px !important;
+    font-weight: 600;
+  }
+}
+.navbar-nav .nav-link.active {
+  color: $blueBg !important;
+}
