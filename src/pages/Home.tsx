@@ -1,5 +1,6 @@
 import { formatCurrency } from "../utilities/formatCurrency";
 import { Products } from "../utilities/interface";
+import { Link } from "react-router-dom";
 
 type HomeProps = {
   product: Products[];
@@ -29,6 +30,9 @@ const Home = ({ product }: HomeProps) => {
               </div>
               <p>{truckcateString(item.description, 150)}</p>
             </div>
+            <Link to="/store" className="w-100">
+              <button className="btn myBtn w-100">Go to store</button>
+            </Link>
           </div>
         ))}
       </div>
