@@ -3,7 +3,6 @@ import { Products } from "../utilities/interface";
 import axios from "axios";
 import { formatCurrency } from "../utilities/formatCurrency";
 
-
 const Home = () => {
   const [product, setProduct] = useState<Products[]>([]);
 
@@ -13,7 +12,7 @@ const Home = () => {
     });
   };
 
-  const truckcateString = (str:string, num:number) => {
+  const truckcateString = (str: string, num: number) => {
     if (str?.length > num) {
       return str.slice(0, num) + "...";
     } else {
@@ -40,6 +39,7 @@ const Home = () => {
                 <h4>{truckcateString(item.title, 30)}</h4>
                 <span>{formatCurrency(item.price)}</span>
               </div>
+              <p>{truckcateString(item.description, 150)}</p>
             </div>
           </div>
         ))}
