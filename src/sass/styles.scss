@@ -7,10 +7,10 @@
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr;
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: $mobile) {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
-  @media screen and (min-width: 1460px) {
+  @media screen and (min-width: $lap) {
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -41,16 +41,16 @@
       align-items: center;
       gap: 0.5rem;
       .remove {
-        background-color: #f22424;
+        background-color: $redBg;
         margin-bottom: 10px;
       }
       .buttons {
         h3 {
           span {
             font-size: 38px;
-            color: black;
+            color: $black;
           }
-          color: #5a5858;
+          color: $gray;
         }
       }
     }
@@ -59,8 +59,8 @@
       justify-content: space-between;
       align-items: baseline;
       padding: 1rem;
-      border-top: 1px solid gray;
-      background-color: white;
+      border-top: 1px solid $gray;
+      background-color: $white;
       gap: 1rem;
       h4 {
         font-size: 18px;
@@ -69,7 +69,7 @@
       span {
         font-size: 16px;
         font-weight: 500;
-        color: #baadad;
+        color: $gray;
       }
     }
     p {
