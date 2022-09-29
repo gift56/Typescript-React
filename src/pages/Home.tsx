@@ -24,8 +24,6 @@ const Home = () => {
     fetchAllProducts();
   }, []);
 
-  console.log(product);
-
   return (
     <div>
       <div className="grid">
