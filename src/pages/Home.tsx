@@ -24,12 +24,11 @@ const Home = () => {
         <div className="card">
           <div className="image">{/* <img src={title} alt={title} /> */}</div>
           <div className="body">
-            <div className="title">
-              <h4>{title}</h4>
-            </div>
+            <div className="title"></div>
           </div>
         </div>
       </div>
+      <h4>{title}</h4>
     </div>
   );
 };
