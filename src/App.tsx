@@ -6,11 +6,9 @@ import Store from "./pages/Store";
 import Navbar from "./components/Navbar";
 import { Products } from "./utilities/interface";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext";
-import { ThemeContext } from "./context/ThemeContext";
 
 function App() {
   const [product, setProduct] = useState<Products[]>([]);
-  const { theme, setTheme } = useContext(ThemeContext);
 
   const fetchAllProducts = async () => {
     axios.get("https://fakestoreapi.com/products").then((res) => {

@@ -11,30 +11,6 @@
 .mb-4 {
   margin-bottom: 1.5rem !important;
 }
-.header {
-  border-bottom: 1px solid $gray;
-  margin-bottom: 1rem;
-  box-shadow: $shadow;
-  padding: 10px 0 !important;
-  button {
-    position: relative;
-    p {
-      position: absolute;
-      top: 0;
-      right: 2px;
-      width: 1.5rem;
-      height: 1.5rem;
-      border-radius: 50px;
-      background-color: $redBg;
-      color: $white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 18px;
-      font-weight: 600;
-    }
-  }
-}
 .btn {
   padding: 12px 20px !important;
   cursor: pointer !important;

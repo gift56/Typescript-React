@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { Nav, Navbar as NavbarBs } from "react-bootstrap";
+import { ThemeContext } from "../context/ThemeContext";
+import styles from "../sass/Header.module.scss";
 
 const Navbar = () => {
   const { openCart, cartQuantity } = useShoppingCart();
+  const { theme, setTheme } = useContext(ThemeContext);
 
   return (
     <NavbarBs sticky="top" className="bg-white shadow-sm mb-3 header">
