@@ -11,3 +11,19 @@ a {
   font-size: 1rem !important;
   font-weight: 600;
 }
+.light {
+  .text {
+    color: $black !important;
+  }
+  .background {
+    background-color: $white !important;
+  }
+}
+.dark {
+  .text {
+    color: $white;
+  }
+  .background {
+    background-color: $black;
+  }
+}
