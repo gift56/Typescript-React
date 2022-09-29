@@ -3,14 +3,7 @@ import { Products } from "../utilities/interface";
 import axios from "axios";
 
 const Home = () => {
-  const [product, setProduct] = useState<Products>({
-    category: "",
-    description: "",
-    id: "",
-    image: "",
-    price: "",
-    title: "",
-  });
+  const [product, setProduct] = useState<Products[]>([]);
 
   const fetchAllProducts = async () => {
     axios.get("https://fakestoreapi.com/products").then((res) => {
@@ -26,7 +19,15 @@ const Home = () => {
 
   return (
     <div>
-      <p>{product?.title}</p>
+      <div className="grid">
+        {product.map((item: any) => (
+          <div className="card">
+            <div className="image">
+              <img src={item.image} alt="" />
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
