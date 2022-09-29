@@ -20,8 +20,6 @@ function App() {
     fetchAllProducts();
   }, []);
 
-  if (!product) return null;
-
   return (
     <>
       <ShoppingCartProvider>
