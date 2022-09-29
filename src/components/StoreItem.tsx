@@ -2,7 +2,7 @@ import { useShoppingCart } from "../context/ShoppingCartContext";
 import { formatCurrency } from "../utilities/formatCurrency";
 
 const StoreItem = ({ item }: any) => {
-  const { id, name, price, imgUrl } = item;
+  const { id, title, price, image } = item;
   const {
     getItemQuantity,
     increaseCartQuantity,
@@ -12,14 +12,22 @@ const StoreItem = ({ item }: any) => {
 
   let quantity = getItemQuantity(id);
 
+  const truckcateString = (str: string, num: number) => {
+    if (str?.length > num) {
+      return str.slice(0, num) + "...";
+    } else {
+      return str;
+    }
+  };
+
   return (
     <div className="card">
       <div className="image">
-        <img src={imgUrl} alt="" />
+        <img src={image} alt="" />
       </div>
       <div className="body">
         <div className="title">
-          <h4>{name}</h4>
+          <h4>{truckcateString(title, 40)}</h4>
           <span>{formatCurrency(price)}</span>
         </div>
         <div className="w-100">

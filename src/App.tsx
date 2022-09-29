@@ -28,7 +28,7 @@ function App() {
         <div className="container mb-4">
           <Routes>
             <Route path="/" element={<Home product={product} />} />
-            <Route path="/store" element={<Store />} />
+            <Route path="/store" element={<Store product={product} />} />
             <Route path="/about" element={<About />} />
           </Routes>
         </div>
