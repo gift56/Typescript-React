@@ -1,11 +1,12 @@
+### Live demo: <a href="https://cart-shopping.vercel.app/">cart-shopping</a>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-
 ### What this website is built with
 
-This project is been built using 
+This project is been built using
 
 -React Typescript template
 -React Hooks and More
