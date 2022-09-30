@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <NavbarBs sticky="top" className={`shadow-sm mb-3 header ${styles[theme]}`}>
       <div className="container">
-        <Nav className="me-auto myLinks">
+        <Nav className="myLinks">
           <Nav.Link to="/" as={NavLink}>
             Home
           </Nav.Link>
@@ -22,7 +22,7 @@ const Navbar = () => {
             Store
           </Nav.Link>
         </Nav>
-        <div className="buttons">
+        <div className="center">
           <span
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
             className="toggler"
