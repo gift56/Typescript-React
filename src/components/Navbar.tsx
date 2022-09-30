@@ -7,7 +7,7 @@ const Navbar = () => {
   const { openCart, cartQuantity } = useShoppingCart();
 
   return (
-    <NavbarBs sticky="top" className="shadow-sm mb-3 header">
+    <NavbarBs sticky="top" className="shadow-sm mb-3 header bg-white">
       <div className="container">
         <Nav className="myLinks">
           <Nav.Link to="/" as={NavLink}>
