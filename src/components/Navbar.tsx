@@ -5,10 +5,11 @@ import { useShoppingCart } from "../context/ShoppingCartContext";
 import { Nav, Navbar as NavbarBs } from "react-bootstrap";
 import { ThemeContext } from "../context/ThemeContext";
 import styles from "../sass/Header.module.scss";
+import { BsFillMoonFill } from "react-icons/bs";
 
 const Navbar = () => {
   const { openCart, cartQuantity } = useShoppingCart();
-  const { theme } = useContext(ThemeContext);
+  const { theme, setTheme } = useContext(ThemeContext);
 
   return (
     <NavbarBs sticky="top" className={`shadow-sm mb-3 header ${styles[theme]}`}>
@@ -21,13 +22,20 @@ const Navbar = () => {
             Store
           </Nav.Link>
         </Nav>
-
-        {cartQuantity > 0 && (
-          <button className="btn myBtn countes" onClick={() => openCart()}>
-            <AiOutlineShoppingCart size={30} color="#fff" />
-            <p className="numbers">{cartQuantity}</p>
-          </button>
-        )}
+        <div className="buttons">
+          <span
+            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+            className="toggler"
+          >
+            <BsFillMoonFill />
+          </span>
+          {cartQuantity > 0 && (
+            <button className="btn myBtn countes" onClick={() => openCart()}>
+              <AiOutlineShoppingCart size={30} color="#fff" />
+              <p className="numbers">{cartQuantity}</p>
+            </button>
+          )}
+        </div>
       </div>
     </NavbarBs>
   );
