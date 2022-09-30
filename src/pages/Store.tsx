@@ -8,7 +8,7 @@ type StoreProps = {
 const Store = ({ product }: StoreProps) => {
   return (
     <>
-      <h1>Store</h1>
+      <h1 className="mb-4">Store</h1>
       <div className="grid">
         {product.map((item) => (
           <div className="col" key={item.id}>
