@@ -2,6 +2,16 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+### What this website is built with
+
+This project is been built using 
+
+-React Typescript template
+-React Hooks and More
+-Axios for api fetching.
+-Sass[Scss] use for styling and all.
+
 ## Available Scripts
 
 In the project directory, you can run:
