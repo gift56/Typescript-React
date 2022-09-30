@@ -42,6 +42,7 @@ const CartItem = ({ id, quantity }: CartItemProps) => {
       <img
         src={item?.image}
         style={{ width: "125px", height: "125px", objectFit: "cover" }}
+        alt={item?.title}
       />
       <div className="me-auto">
         <div>
